@@ -1,0 +1,55 @@
+.hover-effect:hover {
+    color: #88ca81;
+    cursor: pointer;
+}
+
+.timeline {
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes movedown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.exp_timeline {
+    animation: moveleft 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes moveleft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.proj_timeline {
+    animation: moveright 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes moveright {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

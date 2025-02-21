@@ -1,0 +1,133 @@
+{
+  "experience": [
+    {
+      "title": "Engineer",
+      "company": "tutorialspoint",
+      "location": "Hyderabad, India",
+      "startDate": "2022/07",
+      "endDate": "present",
+      "description1": "I have developed compact and efficient projects using ReactJS, JavaScript, jQuery, and Bootstrap, focusing on creating dynamic and user-friendly interfaces. Additionally, I have written clear and well-structured documentation to help front-end developers easily understand, implement, and extend the projects.",
+      "description2": "I've supported 100K+ users in understanding C++, Java, Python, C#, C, JavaScript, ReactJs, NodeJs, Kotlin, HTML, CSS, and others through simple frontend apps and clear Tutorials and Articles"
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "CalSoft",
+      "location": "Pune, India",
+      "startDate": "2022/01",
+      "endDate": "2022/06",
+      "description1": "Designed and developed a full-stack e-commerce web application with all basic to advanced operations for users and worked on a company project to improve the existing flows and features.",
+      "description2": "Tech Stack: React.JS, Node.JS, express.JS, MongoDB, Jira, git, Data Structures"
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Contact Management System",
+      "description": "Developed a REST full website to manage contact details, which allows administrators to perform crud operations on user details using JSON server as well as React.js and its services.",
+      "techStack": "ReactJS, Restfull Services, JavaScript, Bootstrap, JSON Server, Axios"
+    },
+    {
+      "title": "Youtube Replica",
+      "description": "Developed a YouTube replica using React.js and Tailwind CSS, integrating the YouTube API to replicate all the core functionalities and features of YouTube.",
+      "techStack": "ReactJS, Tailwind CSS, YouTube API"
+    },
+    {
+      "title": "Text-Utils",
+      "description": "A text-util website has been designed and developed using ReactJS, React Props, and Bootstrap, where this project helps the user convert text into another formats like Uppercase, Lowercase, Clear Text, Copy Text, and many more.",
+      "techStack": "ReactJS, React Props, Bootstrap"
+    }
+  ],
+
+  "portfolios": [
+    {
+      "title": "Contact Management System",
+      "description": "Developed a REST full website to manage contact details, which allows administrators to perform crud operations on user details using JSON server as well as React.js and its services.",
+      "link": "https://github.com/amankr119/CMS"
+    },
+    {
+      "title": "Youtube Replica",
+      "description": "Developed a YouTube replica using React.js and Tailwind CSS, integrating the YouTube API to replicate all the core functionalities and features of YouTube.",
+      "link": "https://youtube-replica-aman.vercel.app/"
+    },
+    {
+      "title": "Text-Utils",
+      "description": "A text-util website has been designed and developed using ReactJS, React Props, and Bootstrap, where this project helps the user convert text into another formats like Uppercase, Lowercase, Clear Text, Copy Text, and many more.",
+      "link": "https://github.com/amankr119/textUtils"
+    },
+    {
+      "title": "Online Voting System",
+      "description": "The Online Voting System, developed with PHP and MySQL, allows users to vote while enabling the admin to monitor results and announce the winner.",
+      "link": "https://github.com/amankr119/Online-Voting_system-In-php/tree/main/Online-Voting-System"
+    },
+    {
+      "title": "Matrimony Website",
+      "description": "Developed using Node.js and JavaScript, this matrimonial platform helps users find compatible partners by providing detailed male and female profiles for informed decision-making and enabling direct communication through chat.",
+      "link": "https://github.com/amankr119/Matrimony-Website-Using-Nodejs"
+    },
+    {
+      "title": "E-Commerce Website",
+      "description": "Created an e-commerce site with React.js, Node.js, and MongoDB, enabling product browsing, cart additions, and Stripe payments for a smooth shopping experience.",
+      "link": "https://github.com/amankr119/CRUD/tree/master"
+    }
+  ],
+
+  "skill": [
+    {
+      "name": "ReactJS",
+      "value": "80"
+    },
+    {
+      "name": "JavaScript",
+      "value": "90"
+    },
+    {
+      "name": "HTML",
+      "value": "90"
+    },
+    {
+      "name": "CSS",
+      "value": "90"
+    },
+    {
+      "name": "Bootstrap",
+      "value": "80"
+    },
+    {
+      "name": "Redux",
+      "value": "50"
+    },
+    {
+      "name": "CSS",
+      "value": "90"
+    },
+    {
+      "name": "Bootstrap",
+      "value": "80"
+    },
+    {
+      "name": "Java",
+      "value": "60"
+    },
+    {
+      "name": "CPP",
+      "value": "60"
+    },
+
+    {
+      "name": "MySQL",
+      "value": "50"
+    },
+    {
+      "name": "SQL",
+      "value": "50"
+    },
+    {
+      "name": "NodeJS",
+      "value": "40"
+    },
+    {
+      "name": "Git",
+      "value": "60"
+    }
+  ]
+}

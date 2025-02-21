@@ -1,0 +1,8 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button-hover-effect:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}

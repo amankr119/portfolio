@@ -1,0 +1,22 @@
+.portfolio{
+    background: #edfdfd;
+}
+.card-effect {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background: #a6c4d47e;
+}
+
+.card-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+.card{
+    font-family: Verdana;
+    font-size: 0.90rem;
+}   
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
