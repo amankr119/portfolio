@@ -29,6 +29,6 @@
   .skills{
     height: 480px;
     overflow-y: scroll;
-    background: #a6c4d47e;
+    background: rgba(34, 27, 27, 0.2);
     scrollbar-color: #1906e7;
   }

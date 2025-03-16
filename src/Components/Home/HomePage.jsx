@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./HomePage.css";
 
+import background from "../../Assest/background.jpg";
+
 import aman_photo from "../../Assest/aman-brand.jpeg";
 import portfolio from "../../Data/Data.json";
 
@@ -25,14 +27,26 @@ function HomePage() {
   }, [currentRole]);
 
   return (
-    <div className="container-fluid home-page">
+    <div
+      className="container-fluid home-page"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh"
+      }}
+    >
       <div className="row p-4">
         <div className="col-md-6 order-2 order-md-1 text-black p-2 rounded">
           <h1>
             Welcome to My <span className="text-danger">Portfolio</span>
           </h1>
           <p className="fw-bold fs-5">Hi, This is</p>
-          <p className="fw-bold fs-5">Aman Kumar, a Software Engineer</p>
+          <p className="intro-para fs-5 font-verdana">
+            Aman Kumar, a professional Front-End Developer and MERN Stack
+            Developer with over 3 years of expertise in ReactJS, JavaScript,
+            jQuery, HTML, CSS, Bootstrap, JSON Server, and RESTful Web Services.
+          </p>
           <p
             className={`fw-bold rounded text-danger fs-5 ${
               fade ? "fade-in" : ""
@@ -40,7 +54,9 @@ function HomePage() {
           >
             {roles[currentRole]}
           </p>
-          <Link className="btn btn-danger" to="/contact">Hire Me!</Link>
+          <Link className="btn btn-danger" to="/contact">
+            Hire Me!
+          </Link>
         </div>
         <div className="col-md-6 d-flex order-1 order-md-2 justify-content-center">
           <div className="align-items-center border-2 rounded-circle shadow-lg p-1">
@@ -51,12 +67,14 @@ function HomePage() {
               alt="Aman"
             />
           </div>
-        </div>        
+        </div>
       </div>
 
       <div className="row p-4">
         <div className="col-md-4 order-4 order-md-4 text-light">
-          <span className=" fs-5 text-black font-verdana fw-bold bg-secondary p-1 rounded">SKILLS</span>
+          <span className=" fs-5 text-black font-verdana fw-bold bg-secondary p-1 rounded">
+            SKILLS
+          </span>
           <div className="skills progress-wrapper  my-2 p-3 rounded">
             <div className="progress-box">
               {skill.skill.map((items, index) => (
@@ -72,9 +90,7 @@ function HomePage() {
                       aria-valuenow={items.value}
                       aria-valuemin="0"
                       aria-valuemax="100"
-                    >
-          
-                    </div>
+                    ></div>
                   </div>
                 </div>
               ))}
@@ -82,86 +98,90 @@ function HomePage() {
           </div>
         </div>
 
-      <div className=" col-md-8 d-flex justify-content-center align-items-center order-3 order-md-3 my-2">
-        {/* Responsive Carousel */}
-        <div
-          id="portfolioCarousel"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-indicators">
-            {portfolio.portfolios.map((_, index) => (
-              <button
-                key={index}
-                type="button"
-                data-bs-target="#portfolioCarousel"
-                data-bs-slide-to={index}
-                className={index === 0 ? "active" : ""}
-                aria-current={index === 0 ? "true" : "false"}
-                aria-label={`Slide ${index + 1}`}
-              ></button>
-            ))}
-          </div>
-          <div className="carousel-inner">
-            {portfolio.portfolios.map((items, index) => (
-              <div
-                className={`carousel-item ${index === 0 ? "active" : ""}`}
-                key={index}
-              >
-                <div className="container">
-                  <div className="row justify-content-center">
-                    <div className="col-lg-6 col-md-6 col-sm-12 my-2">
-                      <div className="card bg-transparent shadow-lg">
-                        <div className="card-body align-items-center text-center shadow-lg">
-                          <p className="card-title fw-bold fs-4 text-black bg-light rounded">
-                            {items.title}
-                          </p>
-                          <p className="card-text text-black">
-                            {items.description}
-                          </p>
-                          <a
-                            href="#"
-                            className="btn btn-outline-info text-danger fw-bold btn-sm w-50 rounded shadow-sm"
-                          >
-                            Visit
-                          </a>
+        <div className=" col-md-8 d-flex justify-content-center align-items-center order-3 order-md-3 my-2">
+          {/* Responsive Carousel */}
+          <div
+            id="portfolioCarousel"
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-indicators">
+              {portfolio.portfolios.map((_, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  data-bs-target="#portfolioCarousel"
+                  data-bs-slide-to={index}
+                  className={index === 0 ? "active" : ""}
+                  aria-current={index === 0 ? "true" : "false"}
+                  aria-label={`Slide ${index + 1}`}
+                ></button>
+              ))}
+            </div>
+            <div className="carousel-inner">
+              {portfolio.portfolios.map((items, index) => (
+                <div
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                  key={index}
+                >
+                  <div
+                    className="container rounded p-3"
+                    style={{ backgroundColor: "rgba(34, 27, 27, 0.2)" }}
+                  >
+                    <div className="row justify-content-center">
+                      <div className="col-lg-6 col-md-6 col-sm-12 my-3">
+                        <div className="card">
+                          <div className="card-body align-items-center text-center shadow-lg">
+                            <p className="card-title fw-bold fs-4 text-black bg-light rounded p-3">
+                              {items.title}
+                            </p>
+                            <p className="card-text text-black">
+                              {items.description}
+                            </p>
+                            <a
+                              href={items.link}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="btn btn-outline-info text-danger fw-bold btn-sm w-50 rounded shadow-sm"
+                            >
+                              Visit
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target="#portfolioCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                className="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target="#portfolioCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                className="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-          <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#portfolioCarousel"
-            data-bs-slide="prev"
-          >
-            <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
-          </button>
-          <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#portfolioCarousel"
-            data-bs-slide="next"
-          >
-            <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
-          </button>
-        </div>
         </div>
       </div>
     </div>
   );
 }
-
 export default HomePage;

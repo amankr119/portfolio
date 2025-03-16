@@ -6,6 +6,7 @@ import HomePage from "./Components/Home/HomePage";
 import Navbar from "./Components/Navbar/Navbar";
 import Portfolio from "./Components/Portfolio/Portfolio";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <BrowserRouter>

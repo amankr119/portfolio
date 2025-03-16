@@ -5,9 +5,20 @@ import data from "../../Data/Data.json";
 
 import project from "../../Data/Data.json";
 
+import background from "../../Assest/background.jpg";
+
 function AboutPage() {
   return (
-    <div className="container-fluid p-3" style={{ background: "#edfdfd" }}>
+    <div
+      className="container-fluid p-3"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh"
+      }}
+    >
+      {" "}
       <p className="fs-3 fw-bold text-danger fw-bolder text-center p-2">
         ABOUT ME
       </p>
@@ -26,7 +37,10 @@ function AboutPage() {
           </p>
         </div>
         <div className="col-md-6 mt-1">
-          <div className="education-sec p-3 shadow-sm timeline rounded" style={{background: "#a6c4d47e"}}>
+          <div
+            className="education-sec p-3 shadow-sm timeline rounded"
+            style={{ background: "#a6c4d47e" }}
+          >
             <div className="graduation-details">
               <p className="fs-5 fw-bold text-black">
                 {" "}
@@ -72,7 +86,8 @@ function AboutPage() {
           {data.experience.map((exp, index) => (
             <div
               key={index}
-              className="exp_timeline shadow-sm p-3 mb-3 text-black rounded" style={{background: "#a6c4d47e"}}
+              className="exp_timeline shadow-sm p-3 mb-3 text-black rounded"
+              style={{ background: "#a6c4d47e" }}
             >
               <p className="fw-bold fs-5">
                 {exp.title} @{" "}
@@ -105,11 +120,15 @@ function AboutPage() {
           {project.projects.map((project, index) => (
             <div
               key={index}
-              className="proj_timeline shadow-sm p-3 mb-3 rounded" style={{background: "#a6c4d47e"}} 
+              className="proj_timeline shadow-sm p-3 mb-3 rounded"
+              style={{ background: "#a6c4d47e" }}
             >
               <p className="fw-bold fs-5">{project.title}</p>
               <p className="mt-2 hover-effect">{project.description}</p>
-              <p className="mb-1">Techstack: <span className="text-secondary">{project.techStack}</span></p>
+              <p className="mb-1">
+                Techstack:{" "}
+                <span className="text-secondary">{project.techStack}</span>
+              </p>
             </div>
           ))}
         </div>
