@@ -1,13 +1,13 @@
 {
   "experience": [
     {
-      "title": "Engineer",
+      "title": "Fonrt Engineer",
       "company": "tutorialspoint",
       "location": "Hyderabad, India",
       "startDate": "2022/07",
       "endDate": "present",
-      "description1": "I have developed compact and efficient projects using ReactJS, JavaScript, jQuery, and Bootstrap, focusing on creating dynamic and user-friendly interfaces. Additionally, I have written clear and well-structured documentation to help front-end developers easily understand, implement, and extend the projects.",
-      "description2": "I've supported 100K+ users in understanding C++, Java, Python, C#, C, JavaScript, ReactJs, NodeJs, Kotlin, HTML, CSS, and others through simple frontend apps and clear Tutorials and Articles"
+      "description1": "Designed and developed compact, efficient projects using ReactJS, JavaScript, jQuery, and Bootstrap, with a focus on building dynamic and user-friendly interfaces. Additionally, I implemented lazy loading to enhance performance and create more efficient custom hooks.",
+      "description2": "I've supported 100K+ users in understanding C++, Java, Python, C#, C, JavaScript, ReactJs, NodeJs, Kotlin, HTML, CSS, and others through simple frontend apps and clear Tutorials and Articles."
     },
     {
       "title": "Full Stack Developer",
@@ -74,60 +74,57 @@
   "skill": [
     {
       "name": "ReactJS",
-      "value": "80"
+      "value": "100"
     },
     {
       "name": "JavaScript",
-      "value": "90"
+      "value": "100"
     },
     {
       "name": "HTML",
-      "value": "90"
+      "value": "100"
     },
     {
       "name": "CSS",
-      "value": "90"
+      "value": "100"
     },
     {
       "name": "Bootstrap",
-      "value": "80"
+      "value": "100"
     },
     {
       "name": "Redux",
-      "value": "50"
-    },
-    {
-      "name": "CSS",
       "value": "90"
     },
+
     {
       "name": "Bootstrap",
-      "value": "80"
+      "value": "100"
     },
     {
       "name": "Java",
-      "value": "60"
+      "value": "80"
     },
     {
       "name": "CPP",
-      "value": "60"
+      "value": "80"
     },
 
     {
       "name": "MySQL",
-      "value": "50"
+      "value": "70"
     },
     {
       "name": "SQL",
-      "value": "50"
+      "value": "70"
     },
     {
       "name": "NodeJS",
-      "value": "40"
+      "value": "60"
     },
     {
       "name": "Git",
-      "value": "60"
+      "value": "80"
     }
   ]
 }

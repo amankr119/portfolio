@@ -7,21 +7,30 @@ import Navbar from "./Components/Navbar/Navbar";
 import Portfolio from "./Components/Portfolio/Portfolio";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import { RouterContextProvider } from "./Components/Context/RouteProtectionContext";
+
+import ProtectedRoute from "./Utils/ProtectedRoute";
+
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
+    <RouterContextProvider>
+      <BrowserRouter>
+        <div className="App">
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+
+            <Route element={<ProtectedRoute />}>
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </RouterContextProvider>
   );
 }
 

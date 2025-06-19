@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./HomePage.css";
-
-import background from "../../Assest/background.jpg";
-
+import { RouteProtectionContext } from "../Context/RouteProtectionContext";
 import aman_photo from "../../Assest/aman-brand.jpeg";
 import portfolio from "../../Data/Data.json";
-
 import skill from "../../Data/Data.json";
 import { Link } from "react-router-dom";
 
 function HomePage() {
-  const roles = ["FrontEnd Developer", "Web Developer", "Full Stack developer"];
+  const { markAsVisited } = useContext(RouteProtectionContext);
 
+  const roles = ["FrontEnd Developer", "Web Developer", "Full Stack developer"];
   const [currentRole, setCurrentRole] = useState(0);
   const [fade, setFade] = useState(false);
 
@@ -24,131 +22,96 @@ function HomePage() {
       }, 500);
     }, 2000);
     return () => clearInterval(interval);
-  }, [currentRole]);
+  }, [currentRole, roles.length]);
+
+  useEffect(() => {
+    markAsVisited();
+  }, [markAsVisited]);
 
   return (
-    <div
-      className="container-fluid home-page"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh"
-      }}
-    >
-      <div className="row p-4">
-        <div className="col-md-6 order-2 order-md-1 text-black p-2 rounded">
-          <h1>
-            Welcome to My <span className="text-danger">Portfolio</span>
+    <div className="container-fluid home-page d-flex flex-column align-items-center">
+      {/* HERO SECTION */}
+      <div className="row align-items-center hero-section mb-5 w-100">
+        <div className="col-md-6 text-section text-center text-md-start">
+          <h1 className="animated-title hi-title">
+            Hi, I'm <span className="text-danger">Aman Kumar</span>
           </h1>
-          <p className="fw-bold fs-5">Hi, This is</p>
-          <p className="intro-para fs-5 font-verdana">
-            Aman Kumar, a professional Front-End Developer and MERN Stack
-            Developer with over 3 years of expertise in ReactJS, JavaScript,
-            jQuery, HTML, CSS, Bootstrap, JSON Server, and RESTful Web Services.
+          <p className="fs-5 intro fade-slide-up text-light">
+            Front-End & MERN Stack Developer
           </p>
-          <p
-            className={`fw-bold rounded text-danger fs-5 ${
-              fade ? "fade-in" : ""
-            }`}
-          >
+          <p className={`fs-5 text-danger fw-bold role-text ${fade ? "fade-in" : ""}`}>
             {roles[currentRole]}
           </p>
-          <Link className="btn btn-danger" to="/contact">
+          <Link
+            to="/contact"
+            className="btn btn-lg btn-danger mt-3 shadow-sm animate-bounce"
+          >
             Hire Me!
           </Link>
         </div>
-        <div className="col-md-6 d-flex order-1 order-md-2 justify-content-center">
-          <div className="align-items-center border-2 rounded-circle shadow-lg p-1">
+        <div className="col-md-6 d-flex justify-content-center align-items-center image-container">
+          <div className="profile-img-wrapper mt-4">
             <img
-              style={{ height: "350px", width: "350px" }}
               src={aman_photo}
-              className="img-fluid rounded-circle"
               alt="Aman"
+              className="img-fluid rounded-circle pulse-animation profile-img"
             />
           </div>
         </div>
       </div>
 
-      <div className="row p-4">
-        <div className="col-md-4 order-4 order-md-4 text-light">
-          <span className=" fs-5 text-black font-verdana fw-bold bg-secondary p-1 rounded">
-            SKILLS
-          </span>
-          <div className="skills progress-wrapper  my-2 p-3 rounded">
-            <div className="progress-box">
-              {skill.skill.map((items, index) => (
-                <div className="progress-item" key={index}>
-                  <div className="d-flex align-items-start">
-                    <p className="fs-5 text-dark">{items.name}</p>
-                  </div>
-                  <div className="progress mb-3" style={{ height: "5px" }}>
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: `${items.value}%` }}
-                      aria-valuenow={items.value}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+      {/* SKILLS SECTION */}
+      <div className="row skills-section py-4 w-100 justify-content-center">
+        <div className="col-md-10 rounded shadow p-4 skills-bg">
+          <h3 className="text-center mb-4 text-danger">My Skills</h3>
+          <div className="row">
+            {skill.skill.map((item, idx) => (
+              <div className="col-sm-6 mb-4 fade-slide-left" key={idx}>
+                <div className="d-flex justify-content-between">
+                  <span className="fw-bold text-dark">{item.name}</span>
+                  <span className="text-muted">{item.value}%</span>
                 </div>
-              ))}
-            </div>
+                <div className="progress custom-progress">
+                  <div
+                    className="progress-bar progress-bar-striped progress-bar-animated custom-progress-bar"
+                    style={{ width: `${item.value}%` }}
+                  />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
 
-        <div className=" col-md-8 d-flex justify-content-center align-items-center order-3 order-md-3 my-2">
-          {/* Responsive Carousel */}
+      {/* PORTFOLIO SECTION */}
+      <div className="row portfolio-section py-5 w-100 justify-content-center">
+        <div className="col-md-10">
+          <h3 className="text-center text-danger mb-4">Projects I've Built</h3>
           <div
             id="portfolioCarousel"
-            className="carousel slide"
+            className="carousel slide fade-in custom-carousel"
             data-bs-ride="carousel"
           >
-            <div className="carousel-indicators">
-              {portfolio.portfolios.map((_, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  data-bs-target="#portfolioCarousel"
-                  data-bs-slide-to={index}
-                  className={index === 0 ? "active" : ""}
-                  aria-current={index === 0 ? "true" : "false"}
-                  aria-label={`Slide ${index + 1}`}
-                ></button>
-              ))}
-            </div>
-            <div className="carousel-inner">
-              {portfolio.portfolios.map((items, index) => (
+            <div className="carousel-inner shadow">
+              {portfolio.portfolios.map((item, index) => (
                 <div
                   className={`carousel-item ${index === 0 ? "active" : ""}`}
                   key={index}
                 >
-                  <div
-                    className="container rounded p-3"
-                    style={{ backgroundColor: "rgba(34, 27, 27, 0.2)" }}
-                  >
-                    <div className="row justify-content-center">
-                      <div className="col-lg-6 col-md-6 col-sm-12 my-3">
-                        <div className="card">
-                          <div className="card-body align-items-center text-center shadow-lg">
-                            <p className="card-title fw-bold fs-4 text-black bg-light rounded p-3">
-                              {items.title}
-                            </p>
-                            <p className="card-text text-black">
-                              {items.description}
-                            </p>
-                            <a
-                              href={items.link}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="btn btn-outline-info text-danger fw-bold btn-sm w-50 rounded shadow-sm"
-                            >
-                              Visit
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                  <div className="card p-4 border-0 bg-white zoom-in custom-card">
+                    <h4 className="card-title text-center text-gradient">
+                      {item.title}
+                    </h4>
+                    <p className="card-text text-center text-secondary">{item.description}</p>
+                    <div className="text-center">
+                      <a
+                        href={item.link}
+                        className="btn btn-outline-danger btn-sm px-4 custom-visit-btn"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Visit
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -160,11 +123,7 @@ function HomePage() {
               data-bs-target="#portfolioCarousel"
               data-bs-slide="prev"
             >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
+              <span className="carousel-control-prev-icon" />
             </button>
             <button
               className="carousel-control-next"
@@ -172,11 +131,7 @@ function HomePage() {
               data-bs-target="#portfolioCarousel"
               data-bs-slide="next"
             >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
+              <span className="carousel-control-next-icon" />
             </button>
           </div>
         </div>

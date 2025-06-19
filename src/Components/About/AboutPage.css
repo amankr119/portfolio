@@ -1,55 +1,115 @@
-.hover-effect:hover {
-    color: #88ca81;
-    cursor: pointer;
-}
-
+/* Animations */
 .timeline {
-    animation: movedown 1s linear forwards;
-    opacity: 0;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
 }
-
 @keyframes movedown {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .exp_timeline {
-    animation: moveleft 1s linear forwards;
-    opacity: 0;
+  animation: moveleft 1s linear forwards;
+  opacity: 0;
 }
-
 @keyframes moveleft {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .proj_timeline {
-    animation: moveright 1s linear forwards;
+  animation: moveright 1s linear forwards;
+  opacity: 0;
+}
+@keyframes moveright {
+  0% {
+    transform: translateX(100px);
     opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-@keyframes moveright {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
+/* Background and Section Styles */
+.about-bg {
+  min-height: 100vh;
+  padding: 0;
+  background: linear-gradient(
+    120deg,
+    rgb(36, 44, 62) 0%,
+    rgb(54, 69, 98) 50%,
+    rgb(44, 62, 80) 100%
+  );
+}
 
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.about-title {
+  color: #ff4800;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.18);
+}
+
+.about-section,
+.exp_timeline,
+.proj_timeline,
+.education-sec {
+  background: rgba(255,255,255,0.07);
+  border-radius: 1rem;
+  color: #f1f1f1;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.about-section p,
+.exp_timeline p,
+.proj_timeline p,
+.education-sec p {
+  color: #e0e6ed;
+}
+
+.exp_timeline .fw-bold,
+.proj_timeline .fw-bold {
+  background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.exp_timeline .text-secondary,
+.proj_timeline .text-secondary {
+  color: #a6c4d4 !important;
+}
+
+.text-success {
+  color: #7fffd4 !important;
+}
+
+.hover-effect:hover {
+  background: rgba(255,255,255,0.13);
+  border-radius: 0.5rem;
+  transition: background 0.2s;
+  color: #f3f4ee;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .about-section,
+  .exp_timeline,
+  .proj_timeline,
+  .education-sec {
+    padding: 1rem !important;
+  }
 }

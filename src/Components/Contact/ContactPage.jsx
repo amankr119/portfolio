@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import background from "../../Assest/background.jpg";
+import "./Contact.css";
 
 function ContactPage() {
   const form = useRef();
@@ -36,12 +36,7 @@ function ContactPage() {
   };
 
   return (
-    <div className="container-fluid p-3" style={{
-      backgroundImage: `url(${background})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      minHeight: "100vh"
-    }}>
+    <div className="container-fluid p-3 contact-bg">
       {alert && (
         <div className={`alert alert-${alert.type} text-center`} role="alert">
           {alert.msg}

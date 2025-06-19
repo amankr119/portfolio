@@ -1,0 +1,9 @@
+.contact-bg {
+  min-height: 100vh;
+  background: linear-gradient(
+    120deg,
+    rgb(36, 44, 62) 0%,
+    rgb(54, 69, 98) 50%,
+    rgb(44, 62, 80) 100%
+  );
+}
