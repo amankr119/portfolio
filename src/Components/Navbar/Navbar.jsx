@@ -12,7 +12,7 @@ const Navbar = () => {
   // function for download Resume
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/1Exr7ZYEoMOl6s48sZzBISO2PX60TUrxW/view?usp=drive_link";
+    link.href = "https://drive.google.com/file/d/1qJOXOdxSpNAHKz10uw8vQocGh9jlwmHP/view?usp=drive_link";
     link.download = "Aman-Kumar-Resume.pdf";
     document.body.appendChild(link);
     link.click();
