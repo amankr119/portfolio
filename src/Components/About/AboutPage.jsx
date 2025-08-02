@@ -28,28 +28,28 @@ function AboutPage() {
               <p className="fs-5 fw-bold">
                 <i className="fa-solid fa-graduation-cap"></i> B.Tech (CSE)
               </p>
-              <p className="fs-6 fw-bold text-secondary">
+              <p className="fs-6 fw-bold text-dark">
                 Lovely Professional University | <span>CGPA: 7.65</span>
               </p>
-              <p className="text-success">2018-2022</p>
+              <p className="text-dark">2018-2022</p>
             </div>
             <div className="college-details">
-              <p className="fs-5 fw-bold">
+              <p className="fs-5 fw-bold ">
                 <i className="fa-sharp fa-solid fa-building-columns"></i> Senior Secondary (PCM)
               </p>
-              <p className="fs-6 fw-bold text-secondary">
+              <p className="fs-6 fw-bold text-dark">
                 MK Inter College Panki | <span>Percentage: 74.3%</span>
               </p>
-              <p className="text-success">2018</p>
+              <p className="text-dark">2018</p>
             </div>
             <div className="school-details">
               <p className="fs-5 fw-bold">
                 <i className="fa-solid fa-school"></i> Secondary
               </p>
-              <p className="fs-6 fw-bold text-secondary">
+              <p className="fs-6 fw-bold text-dark">
                 RK +2 High School Panki | <span>Percentage: 79%</span>
               </p>
-              <p className="text-success">2015</p>
+              <p className="text-dark">2015</p>
             </div>
           </div>
         </div>
@@ -66,14 +66,14 @@ function AboutPage() {
             >
               <p className="fw-bold fs-5">
                 {exp.title} @{" "}
-                <span className="fw-light text-secondary fs-6">
+                <span className="fw-light fs-6">
                   {exp.company}
                 </span>
               </p>
-              <p className="fw-light">
+              <p className="fw-light text-dark">
                 <i className="fa-solid fa-location-dot"></i> {exp.location}
               </p>
-              <p className="mb-1 text-secondary">
+              <p className="mb-1 text-dark">
                 {exp.startDate} - {exp.endDate}
               </p>
               <p className="mt-2 hover-effect">
@@ -98,7 +98,7 @@ function AboutPage() {
               <p className="mt-2 hover-effect">{project.description}</p>
               <p className="mb-1">
                 Techstack:{" "}
-                <span className="text-secondary">{project.techStack}</span>
+                <span className="text-dark">{project.techStack}</span>
               </p>
             </div>
           ))}

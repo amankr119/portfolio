@@ -44,7 +44,7 @@ function ContactPage() {
       )}
 
       <div className=" p-2 mb-3 bg-transparent rounded">
-        <p className=" text-center text-danger fw-bolder fs-3 rounded">
+        <p className=" text-center text-white fw-bolder fs-3 rounded">
           GET IN TOUCH
         </p>
       </div>

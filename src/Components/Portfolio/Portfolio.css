@@ -3,49 +3,16 @@
   padding: 0;
   background: linear-gradient(
     120deg,
-    rgb(36, 44, 62) 0%,
-    rgb(54, 69, 98) 50%,
-    rgb(44, 62, 80) 100%
+    rgb(98, 109, 135) 0%,
+    rgb(173, 175, 180) 50%,
+    rgb(84, 107, 129) 100%
   );
 }
-.portfolio-title {
-  background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 2px;
-}
 
-.portfolio-desc {
-  color: #e0e6ed !important;
-}
-.portfolio .fs-3,
-.portfolio .fw-bold,
-.portfolio .card-title,
-.portfolio .card-text,
-.portfolio .font-verdana,
-.portfolio p,
-.portfolio a {
-  color: #f1f1f1 !important;
-}
 
 .portfolio .card {
   background: rgba(255,255,255,0.07);
   border-radius: 1.25rem;
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-  border: none;
-}
-
-.portfolio .btn-outline-success {
-  border-color: #ff512f;
-  color: #ff512f !important;
-  background: transparent;
-  font-weight: 600;
-  transition: background 0.2s, color 0.2s;
-}
-
-.portfolio .btn-outline-success:hover {
-  background: linear-gradient(90deg, #ff512f 0%, #dd2476 100%);
-  color: #fff !important;
   border: none;
 }

@@ -12,7 +12,8 @@ const Navbar = () => {
   // function for download Resume
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/1KqA-Q21iuksUJa9rjaaUTaew_U_7MHRD/view?usp=drive_link";
+    link.href =
+      "https://drive.google.com/file/d/1tQ3QVNQxI5VVx85OURJrmDzK6F-4CdHQ/view?usp=drive_link";
     link.download = "Aman-Kumar-Resume.pdf";
     document.body.appendChild(link);
     link.click();
@@ -24,7 +25,7 @@ const Navbar = () => {
       <div className="container-fluid text-light fw-bold">
         <div className="brand-dropdown-wrapper position-relative">
           <button className="btn navbar-brand" onClick={toggleDisplay}>
-            <span className="brand-title">Aman Kr</span>
+            <span className="brand-title">Aman</span>
             {display && (
               <div
                 className="position-absolute bg-light rounded shadow-lg p-1 mt-1"

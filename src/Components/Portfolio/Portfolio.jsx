@@ -12,31 +12,31 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio container-fluid p-3">
-      <p className="fs-3 fw-bold text-center font-verdana p-2 portfolio-title">
+      <p className="fs-3 fw-bold text-center text-white font-verdana p-2 portfolio-title">
         PORTFOLIO
       </p>
       <div className="fs-5 text-center mb-3 shadow-sm rounded">
-        <p className="text-start font-verdana p-2 portfolio-desc">
+        <p className="text-start font-verdana p-2 text-white">
           {paragraphText}
         </p>
       </div>
       <div className="row">
         {portfolio.portfolios.map((items, index) => (
           <div className="col-md-4" key={index}>
-            <div className="card-effect card-body text-center mb-3 p-1 shadow-sm rounded opacity-75">
+            <div className=" text-center mb-3 p-1 shadow-sm rounded opacity-75">
               <div
                 className="card shadow-sm p-3 shadow-lg"
                 style={{ height: "300px" }}
               >
-                <p className="card-title fw-bold fs-4 p-2 shadow-sm rounded">
+                <p className="fw-bold fs-4 p-2 shadow-sm rounded ">
                   {items.title}
                 </p>
-                <p className="card-text text-start">{items.description}</p>
+                <p className="card-text text-start text-white">{items.description}</p>
                 <a
                   href={items.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline-success fw-bold btn-sm w-50 align-self-center rounded mt-auto"
+                  className="btn btn-outline-primary fw-bold btn-sm w-50 align-self-center rounded mt-auto"
                 >
                   Visit
                 </a>

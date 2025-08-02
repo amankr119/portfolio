@@ -34,17 +34,17 @@ function HomePage() {
       <div className="row align-items-center hero-section mb-5 w-100">
         <div className="col-md-6 text-section text-center text-md-start">
           <h1 className="animated-title hi-title">
-            Hi, I'm <span className="text-danger">Aman Kumar</span>
+            Hi, I'm <span className="text-dark">Aman Kumar</span>
           </h1>
-          <p className="fs-5 intro fade-slide-up text-light">
-            Front-End & MERN Stack Developer
+          <p className="fs-5 intro fade-slide-up text-black">
+            Software Engineer - MERN Stack Developer
           </p>
-          <p className={`fs-5 text-danger fw-bold role-text ${fade ? "fade-in" : ""}`}>
+          <p className={`fs-5 text-black fw-bold role-text ${fade ? "fade-in" : ""}`}>
             {roles[currentRole]}
           </p>
           <Link
             to="/contact"
-            className="btn btn-lg btn-danger mt-3 shadow-sm animate-bounce"
+            className="btn btn-lg btn-primary mt-3 shadow-sm animate-bounce"
           >
             Hire Me!
           </Link>
@@ -63,7 +63,7 @@ function HomePage() {
       {/* SKILLS SECTION */}
       <div className="row skills-section py-4 w-100 justify-content-center">
         <div className="col-md-10 rounded shadow p-4 skills-bg">
-          <h3 className="text-center mb-4 text-danger">My Skills</h3>
+          <h3 className="text-center mb-4 text-light">Skills</h3>
           <div className="row">
             {skill.skill.map((item, idx) => (
               <div className="col-sm-6 mb-4 fade-slide-left" key={idx}>
@@ -86,7 +86,7 @@ function HomePage() {
       {/* PORTFOLIO SECTION */}
       <div className="row portfolio-section py-5 w-100 justify-content-center">
         <div className="col-md-10">
-          <h3 className="text-center text-danger mb-4">Projects I've Built</h3>
+          <h3 className="text-center text-light mb-4">Projects</h3>
           <div
             id="portfolioCarousel"
             className="carousel slide fade-in custom-carousel"
@@ -106,7 +106,7 @@ function HomePage() {
                     <div className="text-center">
                       <a
                         href={item.link}
-                        className="btn btn-outline-danger btn-sm px-4 custom-visit-btn"
+                        className="btn btn-outline-success btn-sm px-4 custom-visit-btn"
                         target="_blank"
                         rel="noreferrer"
                       >
